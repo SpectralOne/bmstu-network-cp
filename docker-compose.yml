@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  nginx:
+    image: ymuski/nginx-quic
+    ports:
+      - "81:81"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./public:/public
